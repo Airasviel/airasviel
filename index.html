@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arga's Portfolio</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --gray: #64748b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #3b82f6);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 1rem 0;
+    }
+
+    nav ul li {
+      margin: 0 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--primary);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      font :
+
+size: 2.2rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: var(--primary);
+      display: block;
+      margin: 0.5rem auto;
+      border-radius: 2px;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      text-align: center;
+      color: var(--gray);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .skill-tag {
+      background: #e0e7ff;
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 1.5rem;
+    }
+
+    .project-info h3 {
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .project-info p {
+      font-size: 0.95rem;
+      color: var(--gray);
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .contact-info {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .contact-info a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--dark);
+      color: white;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      nav ul { flex-direction: column; text-align: center; }
+      nav ul li { margin: 0.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hafiyyan Arga</h1>
+    <p>Mechanical Engineering Student | Aspiring Web Developer</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm Arga, a mechanical engineering student passionate about technology, design, and building things from scratch.</p>
+    <p>I taught myself HTML, CSS, and JavaScript to create digital experiences. I love aeromodelling, aviation, and learning how things work.</p>
+    <p>Currently exploring front-end development and UI/UX design.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span class="skill-tag">HTML</span>
+      <span class="skill-tag">CSS</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">Git & GitHub</span>
+      <span class="skill-tag">Responsive Design</span>
+      <span class="skill-tag">Figma</span>
+      <span class="skill-tag">Aeromodelling</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x180/2563eb/white?text=Portfolio+Site" alt="Portfolio">
+        <div class="project-info">
+          <h3>Personal Portfolio</h3>
+          <p>A clean, responsive portfolio to showcase my journey and projects.</p>
+          <a href="#" class="btn">View Live</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x180/10b981/white?text=Calculator" alt="Calculator">
+        <div class="project-info">
+          <h3>Interactive Calculator</h3>
+          <p>Built with vanilla JavaScript — supports basic operations and dark mode.</p>
+          <a href="#" class="btn">View Code</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x180/f59e0b/white?text=Aeromodel" alt="Aeromodel">
+        <div class="project-info">
+          <h3>Aeromodelling Documentation</h3>
+          <p>Technical report and 3D model of a RC plane I designed and flew.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>ROAD</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:hafiyyanarga23@gmail.com">hafiyyanarga23@gmail.com</a></p>
+      <p>XXX: <a href="Abandon all hope, ye who enter here" target="_blank">nhentai.net/g/177013</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Airasviel.</p>
+  </footer>
+
+</body>
+            </html>
